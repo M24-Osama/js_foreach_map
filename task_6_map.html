@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function doubleNumbers(arr) {
+        return arr.map((num) => num * 2);
+      }
+      console.log(doubleNumbers([2, 5, 100]));
+      function stringItUp(arr) {
+        return arr.map((num) => num.toString());
+      }
+
+      console.log(stringItUp([2, 5, 100]));
+
+      function capitalizeNames(arr) {
+        let newArr = arr.map((num) => {
+          return num[0].toUpperCase() + num.slice(1).toLowerCase();
+        });
+        return newArr;
+      }
+
+      console.log(
+        capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"])
+      );
+      function namesOnly(arr) {
+        return arr.map((num) => num.name);
+      }
+      console.log(
+        namesOnly([
+          {
+            name: "Angelina Jolie",
+            age: 80,
+          },
+          {
+            name: "Eric Jones",
+            age: 2,
+          },
+          {
+            name: "Paris Hilton",
+            age: 5,
+          },
+          {
+            name: "Kayne West",
+            age: 16,
+          },
+          {
+            name: "Bob Ziroll",
+            age: 100,
+          },
+        ])
+      );
+      function makeStrings(arr) {
+        let newArr = [];
+        arr.map((num) => {
+          if (num.age > 18) {
+            newArr.push(`${num.name} can go to The Matrix`);
+          } else {
+            newArr.push(`${num.name}  is under age!!`);
+          }
+        });
+        return newArr;
+      }
+      console.log(
+        makeStrings([
+          {
+            name: "Angelina Jolie",
+            age: 80,
+          },
+          {
+            name: "Eric Jones",
+            age: 2,
+          },
+          {
+            name: "Paris Hilton",
+            age: 5,
+          },
+          {
+            name: "Kayne West",
+            age: 16,
+          },
+          {
+            name: "Bob Ziroll",
+            age: 100,
+          },
+        ])
+      );
+
+      function readyToPutInTheDOM(arr) {
+        return arr.map(
+          (person) => `<h1>${person.name}</h1><h2>${person.age}</h2>`
+        );
+      }
+      console.log(
+        readyToPutInTheDOM([
+          {
+            name: "Angelina Jolie",
+            age: 80,
+          },
+          {
+            name: "Eric Jones",
+            age: 2,
+          },
+          {
+            name: "Paris Hilton",
+            age: 5,
+          },
+          {
+            name: "Kayne West",
+            age: 16,
+          },
+          {
+            name: "Bob Ziroll",
+            age: 100,
+          },
+        ])
+      );
+      function doubleValues(arr) {
+        return arr.map((num) => num * 2);
+      }
+
+      console.log(doubleValues([1, 2, 3]));
+      console.log(doubleValues([1, -2, -3]));
+      function valTimesIndex(arr) {
+        return arr.map((num, index) => num * index);
+      }
+      console.log(valTimesIndex([1, 2, 3]));
+      console.log(valTimesIndex([1, -2, -3]));
+
+      function extractKey(arr, key) {
+        return arr.map((obj) => obj[key]);
+      }
+      console.log(
+        extractKey(
+          [
+            { name: "Elie" },
+            { name: "Tim" },
+            { name: "Matt" },
+            { name: "Colt" },
+          ],
+          "name"
+        )
+      );
+      function extractFullName(arr) {
+        return arr.map((person) => `${person.first} ${person.last}`);
+      }
+      console.log(
+        extractFullName([
+          { first: "Elie", last: "Schoppik" },
+          { first: "Tim", last: "Garcia" },
+          { first: "Matt", last: "Lane" },
+          { first: "Colt", last: "Steele" },
+        ])
+      );
+    </script>
+  </body>
+</html>

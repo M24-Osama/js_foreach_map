@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function doubleValues(arr) {
+        let doubledArr = [];
+        arr.forEach(function (value) {
+          doubledArr.push(value * 2);
+        });
+        return doubledArr;
+      }
+
+      console.log(doubleValues([1, 2, 3]));
+      console.log(doubleValues([5, 1, 2, 3, 10]));
+
+      function onlyEvenValues(arr) {
+        let even = [];
+        arr.forEach(function (value) {
+          if (value % 2 === 0) even.push(value * 2);
+        });
+        return even;
+      }
+
+      console.log(onlyEvenValues([1, 2, 3]));
+      console.log(onlyEvenValues([5, 1, 2, 3, 10]));
+      function showFirstAndLast(arr) {
+        let firstAndLast = [];
+        arr.forEach(function (value) {
+          firstAndLast.push(value[0] + value[value.length - 1]);
+        });
+        return firstAndLast;
+      }
+
+      console.log(showFirstAndLast(["colt", "matt", "tim", "udemy"]));
+      console.log(showFirstAndLast(["hi", "goodbye", "smile"]));
+
+      function addKeyAndValue(arr, key, v) {
+        let obj = [];
+
+        arr.forEach(function (value) {
+          obj.push({ ...value, [key]: v });
+        });
+        return obj;
+      }
+
+      console.log(
+        addKeyAndValue(
+          [
+            { name: "Elie" },
+            { name: "Tim" },
+            { name: "Matt" },
+            { name: "Colt" },
+          ],
+          "title",
+          "instructor"
+        )
+      );
+
+      function vowelCount(str) {
+        let arr = [];
+      }
+
+      function vowelCount(str) {
+        let vowelCounts = {};
+        const vowels = "aeiou";
+
+        const lowerCaseStr = str.toLowerCase().split("");
+        lowerCaseStr.forEach((char) => {
+          if (vowels.includes(char)) {
+            vowelCounts[char] = (vowelCounts[char] || 0) + 1;
+          }
+        });
+
+        return vowelCounts;
+      }
+
+      console.log(vowelCount("Elie"));
+      console.log(vowelCount("Tim"));
+      console.log(vowelCount("I Am awesome and so are you"));
+    </script>
+  </body>
+</html>
